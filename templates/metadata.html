@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<style>
+		body{
+			min-height:100%;
+		}
+		
+		#info{
+			text-align: center;
+		}
+		#metadata{
+			
+			display: flex;
+			justify-content:center;
+			margin: 2rem 0rem;
+		}
+
+		#footer{
+			display: flex;
+
+			bottom:0;
+			margin: 1rem 0rem;
+			width: 100%;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			background-color: white;
+		}
+	</style>
+</head>
+
+<body>
+	
+	{% if form.long %}
+		<div id="info">
+			Successfully added Longitude and latitude ({{ form.long }}, {{ form.lat }}) to metadata of the {{ form.filename }}.
+		</div>
+	{% endif %}
+	<div id="info">
+		<h3>
+			Metadata of the image {{ form.filename }}
+		</h3>
+	</div>
+	<div id="metadata">
+		{{ text|safe }}
+	</div>
+	
+	<div id="footer">
+		
+		<span>Designed and Created by <a href="https://anishk74.github.io">Anish</a><span>
+		</br>
+		<span>Copyright &#169; 2021</span>
+	</div>
+</body>
+
+</html>

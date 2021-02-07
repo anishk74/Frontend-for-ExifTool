@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<style>
+		body{
+			min-height:100%;
+		}
+		#text{
+			display: flex;
+			justify-content: center;
+		}
+		
+		
+		.formOuter{
+			text-align: center;
+			margin: 3rem 0rem;
+
+
+		}
+		#fileform{
+			justify-content: center;
+		}
+		#GPSform{
+			justify-content:center;
+			align-items:center;
+		}
+		input{
+			margin: 0.5rem 0rem;
+		}
+		#footer{
+			display: flex;
+			position: fixed;
+			bottom:0;
+			margin: 1rem 0rem;
+			width: 100%;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div class="formOuter">
+		<div id="text">
+			<h2>Get Meta-Data of an image</h2>
+		</div>
+		<form id="fileform" action="/metadata/" method="post">
+			<label for="filename">Path to file</label>
+			<input type="text" id="filename" name="filename"/> <br>
+	        <input type="submit" value="Submit"/>
+	    </form>
+	</div>
+	<div class="formOuter">
+		<div id="text">
+			<h2>Add/Modify GPS metadata of image</h2>
+		</div>
+		<form id="GPSform" action="/addedgps/" method="post">
+			<label for="filename">Path to file</label>
+			<input type="text" id="filename" name="filename"/> <br>
+			<label for="long">Enter Longitude(Ref. Eest)</label>
+			<input type="number" step="any" id="long" name="long" placeholder="Enter longitude"/> <br>
+			<label for="long">Enter Latitude(Ref. North)</label>
+			<input type="number" step="any" id="lat" name="lat" placeholder="Enter latitude"/> <br>
+            <input type="submit" value="Update"/>
+    	</form>
+	</div>
+	<div id="footer">
+		<span>Designed and Created by <a href="https://anishk74.github.io">Anish</a><span>
+		</br>
+		<span>Copyright &#169; 2021</span>
+	</div>
+	
+</body>
+
+</html>
